@@ -1,0 +1,1746 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>இறைவழி — Medicine-Free Healing Center | Coimbatore</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Noto+Sans+Tamil:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ─────────────────────────────────────────────────────────────
+   CSS CUSTOM PROPERTIES — THEME SYSTEM
+───────────────────────────────────────────────────────────── */
+:root {
+  --primary:      #1a4a2e;
+  --primary-deep: #0d2b1a;
+  --primary-mid:  #234d35;
+  --accent:       #c9a84c;
+  --accent-light: #e2c97e;
+  --accent-pale:  #f5e9c4;
+  --bg:           #faf7f0;
+  --bg-alt:       #f1ece0;
+  --text:         #1c1c1c;
+  --text-muted:   #5a5a4a;
+  --text-light:   #8a7e6a;
+  --white:        #ffffff;
+  --card-bg:      #ffffff;
+  --border:       #d4c9a8;
+  --shadow:       rgba(26,74,46,0.15);
+  --shadow-gold:  rgba(201,168,76,0.3);
+  --overlay:      rgba(13,43,26,0.88);
+  --grad-hero:    linear-gradient(160deg, #0d2b1a 0%, #1a4a2e 45%, #2d6b47 100%);
+  --noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+}
+
+/* THEMES */
+[data-theme="ocean"] {
+  --primary:#0d3d5c; --primary-deep:#061e30; --primary-mid:#1a5a7a;
+  --accent:#f0a500; --accent-light:#f5c040; --accent-pale:#fef3d0;
+  --bg:#f0f7fc; --bg-alt:#e2eef7; --text:#0a1f30; --text-muted:#3a5a72;
+  --card-bg:#fff; --border:#b8d4e8; --shadow:rgba(13,61,92,.15);
+  --grad-hero:linear-gradient(160deg,#061e30 0%,#0d3d5c 50%,#1a7a8a 100%);
+}
+[data-theme="royal"] {
+  --primary:#3b1a78; --primary-deep:#1e0d42; --primary-mid:#5a2d9c;
+  --accent:#d4a017; --accent-light:#f0c040; --accent-pale:#fdf5d5;
+  --bg:#f8f5ff; --bg-alt:#ede8f8; --text:#1a0d33; --text-muted:#5a3a88;
+  --card-bg:#fff; --border:#c8b8f0; --shadow:rgba(59,26,120,.18);
+  --grad-hero:linear-gradient(160deg,#1e0d42 0%,#3b1a78 50%,#7a3dbc 100%);
+}
+[data-theme="sunset"] {
+  --primary:#8b2500; --primary-deep:#4a1000; --primary-mid:#c03010;
+  --accent:#e8a020; --accent-light:#f5c050; --accent-pale:#fff0cc;
+  --bg:#fff8f0; --bg-alt:#fce8d8; --text:#2a0e00; --text-muted:#7a3010;
+  --card-bg:#fff; --border:#f0c8a0; --shadow:rgba(139,37,0,.18);
+  --grad-hero:linear-gradient(160deg,#4a1000 0%,#8b2500 50%,#c05020 100%);
+}
+[data-theme="rose"] {
+  --primary:#6b2040; --primary-deep:#3a0e20; --primary-mid:#9a3060;
+  --accent:#c8a050; --accent-light:#e0c070; --accent-pale:#fdf0e0;
+  --bg:#fff5f8; --bg-alt:#fce8f0; --text:#2a0a18; --text-muted:#7a3050;
+  --card-bg:#fff; --border:#f0c8d8; --shadow:rgba(107,32,64,.18);
+  --grad-hero:linear-gradient(160deg,#3a0e20 0%,#6b2040 50%,#a04060 100%);
+}
+[data-theme="light"] {
+  --primary:#2a5c3a; --primary-deep:#1a3a26; --primary-mid:#3d7a52;
+  --accent:#8b6914; --accent-light:#b8920a; --accent-pale:#fef8e6;
+  --bg:#ffffff; --bg-alt:#f5f5f0; --text:#111; --text-muted:#444;
+  --card-bg:#fafafa; --border:#ddd; --shadow:rgba(0,0,0,.1);
+  --grad-hero:linear-gradient(160deg,#1a3a26 0%,#2a5c3a 50%,#4a8c62 100%);
+}
+[data-theme="slate"] {
+  --primary:#1a2a3a; --primary-deep:#0a1520; --primary-mid:#2a3d52;
+  --accent:#c08a30; --accent-light:#e0b050; --accent-pale:#fdf4e0;
+  --bg:#f5f7fa; --bg-alt:#eaedf2; --text:#0a1520; --text-muted:#3a4a5a;
+  --card-bg:#fff; --border:#c0c8d4; --shadow:rgba(26,42,58,.15);
+  --grad-hero:linear-gradient(160deg,#0a1520 0%,#1a2a3a 50%,#2a4060 100%);
+}
+[data-theme="earth"] {
+  --primary:#4a3010; --primary-deep:#251808; --primary-mid:#6a4820;
+  --accent:#c8a040; --accent-light:#e8c060; --accent-pale:#fdf5d8;
+  --bg:#faf5ec; --bg-alt:#f0e8d8; --text:#1a0e04; --text-muted:#6a4828;
+  --card-bg:#fffdf8; --border:#d8c8a0; --shadow:rgba(74,48,16,.18);
+  --grad-hero:linear-gradient(160deg,#251808 0%,#4a3010 50%,#7a5828 100%);
+}
+[data-theme="custom"] {
+  --primary: var(--custom-primary, #1a4a2e);
+  --primary-deep: var(--custom-deep, #0d2b1a);
+  --primary-mid: var(--custom-mid, #234d35);
+  --accent: var(--custom-accent, #c9a84c);
+  --grad-hero: var(--custom-grad, linear-gradient(160deg,#0d2b1a 0%,#1a4a2e 50%,#2d6b47 100%));
+}
+
+/* ─────────────────────────────────────────────────────────────
+   RESET & BASE
+───────────────────────────────────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{
+  font-family:'Noto Sans Tamil','Cormorant Garamond',serif;
+  background:var(--bg);
+  color:var(--text);
+  overflow-x:hidden;
+  transition:background .4s,color .4s;
+}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+
+/* ─────────────────────────────────────────────────────────────
+   TYPOGRAPHY HELPERS
+───────────────────────────────────────────────────────────── */
+.cinzel       {font-family:'Cinzel',serif}
+.cormorant    {font-family:'Cormorant Garamond',serif}
+.tamil        {font-family:'Noto Sans Tamil',sans-serif}
+.accent-color {color:var(--accent)}
+.primary-color{color:var(--primary)}
+
+/* ─────────────────────────────────────────────────────────────
+   SCROLL REVEAL
+───────────────────────────────────────────────────────────── */
+.reveal{opacity:0;transform:translateY(40px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-left{opacity:0;transform:translateX(-40px);transition:opacity .7s ease,transform .7s ease}
+.reveal-left.visible{opacity:1;transform:translateX(0)}
+.reveal-right{opacity:0;transform:translateX(40px);transition:opacity .7s ease,transform .7s ease}
+.reveal-right.visible{opacity:1;transform:translateX(0)}
+.reveal-scale{opacity:0;transform:scale(.92);transition:opacity .7s ease,transform .7s ease}
+.reveal-scale.visible{opacity:1;transform:scale(1)}
+
+/* ─────────────────────────────────────────────────────────────
+   NAVIGATION
+───────────────────────────────────────────────────────── */
+#navbar{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  padding:0 5%;
+  display:flex;align-items:center;justify-content:space-between;
+  height:72px;
+  background:rgba(13,43,26,.96);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(201,168,76,.25);
+  transition:background .3s, box-shadow .3s;
+}
+#navbar.scrolled{
+  box-shadow:0 4px 30px rgba(0,0,0,.3);
+  background:rgba(13,43,26,.99);
+}
+.nav-brand{display:flex;align-items:center;gap:12px}
+.nav-logo-ring{
+  width:42px;height:42px;
+  border-radius:50%;
+  border:2px solid var(--accent);
+  display:flex;align-items:center;justify-content:center;
+  font-size:20px;
+  box-shadow:0 0 14px var(--shadow-gold);
+  flex-shrink:0;
+}
+.nav-title-wrap{}
+.nav-title-ta{
+  font-family:'Noto Sans Tamil',sans-serif;
+  font-size:1.15rem;font-weight:700;
+  color:var(--accent-light);
+  line-height:1.1;
+  letter-spacing:.02em;
+}
+.nav-title-en{
+  font-family:'Cinzel',serif;
+  font-size:.6rem;color:rgba(201,168,76,.75);
+  letter-spacing:.18em;text-transform:uppercase;
+}
+.nav-links{display:flex;align-items:center;gap:28px}
+.nav-links a{
+  font-family:'Cinzel',serif;
+  font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;
+  color:rgba(255,255,255,.8);
+  transition:color .25s;
+  position:relative;
+}
+.nav-links a::after{
+  content:'';position:absolute;bottom:-3px;left:0;right:0;height:1px;
+  background:var(--accent);transform:scaleX(0);transition:transform .25s;
+}
+.nav-links a:hover{color:var(--accent-light)}
+.nav-links a:hover::after{transform:scaleX(1)}
+.nav-phone{
+  display:flex;align-items:center;gap:8px;
+  font-family:'Cinzel',serif;font-size:.75rem;
+  color:var(--accent);letter-spacing:.05em;
+  border:1px solid rgba(201,168,76,.4);
+  padding:6px 14px;border-radius:24px;
+  transition:all .25s;
+}
+.nav-phone:hover{background:var(--accent);color:var(--primary-deep)}
+.nav-phone span{font-size:14px}
+.hamburger{
+  display:none;flex-direction:column;gap:5px;cursor:pointer;
+  padding:4px;background:none;border:none;
+}
+.hamburger span{
+  display:block;width:24px;height:2px;background:var(--accent-light);
+  transition:all .3s;border-radius:2px;
+}
+.hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+
+/* Mobile Nav */
+.mobile-nav{
+  display:none;
+  position:fixed;top:72px;left:0;right:0;z-index:999;
+  background:rgba(13,43,26,.98);
+  padding:20px 5%;
+  flex-direction:column;gap:18px;
+  border-bottom:1px solid rgba(201,168,76,.2);
+  backdrop-filter:blur(12px);
+}
+.mobile-nav.open{display:flex}
+.mobile-nav a{
+  font-family:'Cinzel',serif;font-size:.9rem;letter-spacing:.1em;
+  color:rgba(255,255,255,.85);padding:10px 0;
+  border-bottom:1px solid rgba(201,168,76,.15);
+}
+.mobile-nav a:last-child{border:none}
+
+/* ─────────────────────────────────────────────────────────────
+   HERO
+───────────────────────────────────────────────────────── */
+#hero{
+  min-height:100vh;
+  background:var(--grad-hero);
+  display:flex;align-items:center;justify-content:center;
+  text-align:center;
+  padding:100px 5% 60px;
+  position:relative;
+  overflow:hidden;
+}
+.hero-bg-pattern{
+  position:absolute;inset:0;
+  background-image:
+    radial-gradient(circle at 20% 80%, rgba(201,168,76,.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(201,168,76,.06) 0%, transparent 50%);
+  background-size:cover;
+}
+.hero-texture{
+  position:absolute;inset:0;
+  background-image:var(--noise);
+  opacity:.6;pointer-events:none;
+}
+/* decorative arch lines */
+.hero-arch{
+  position:absolute;top:-120px;left:50%;transform:translateX(-50%);
+  width:700px;height:700px;border-radius:50%;
+  border:1px solid rgba(201,168,76,.08);pointer-events:none;
+}
+.hero-arch:nth-child(2){width:900px;height:900px;border-color:rgba(201,168,76,.05)}
+.hero-arch:nth-child(3){width:1100px;height:1100px;border-color:rgba(201,168,76,.03)}
+
+.hero-content{position:relative;z-index:2;max-width:780px;margin:0 auto}
+
+/* Pulse ring */
+.pulse-wrapper{
+  display:inline-flex;align-items:center;justify-content:center;
+  margin-bottom:36px;position:relative;
+}
+.pulse-ring{
+  position:absolute;
+  width:100%;height:100%;border-radius:50%;
+  border:2px solid rgba(201,168,76,.6);
+  animation:pulseOut 2.4s ease-out infinite;
+}
+.pulse-ring:nth-child(2){animation-delay:.8s}
+.pulse-ring:nth-child(3){animation-delay:1.6s}
+@keyframes pulseOut{
+  0%{transform:scale(1);opacity:.8}
+  100%{transform:scale(2.4);opacity:0}
+}
+.hero-emblem{
+  width:110px;height:110px;border-radius:50%;
+  background:linear-gradient(135deg, rgba(201,168,76,.15), rgba(201,168,76,.05));
+  border:2px solid var(--accent);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  box-shadow:0 0 40px rgba(201,168,76,.25), inset 0 0 30px rgba(201,168,76,.05);
+  position:relative;z-index:1;
+}
+.hero-emblem-symbol{font-size:2.2rem;line-height:1}
+.hero-emblem-text{
+  font-family:'Cinzel',serif;font-size:.45rem;letter-spacing:.18em;
+  color:var(--accent);margin-top:4px;text-transform:uppercase;
+}
+
+.hero-subtitle-tag{
+  display:inline-block;
+  font-family:'Cinzel',serif;font-size:.65rem;letter-spacing:.3em;text-transform:uppercase;
+  color:var(--accent);
+  border:1px solid rgba(201,168,76,.4);
+  padding:6px 20px;border-radius:24px;
+  margin-bottom:24px;
+  background:rgba(201,168,76,.06);
+}
+.hero-ta-heading{
+  font-family:'Noto Sans Tamil',sans-serif;
+  font-size:clamp(2.6rem,6vw,4.2rem);
+  font-weight:700;
+  color:#fff;
+  line-height:1.2;
+  margin-bottom:12px;
+  text-shadow:0 2px 20px rgba(0,0,0,.4);
+}
+.hero-ta-heading span{color:var(--accent-light)}
+.hero-en-heading{
+  font-family:'Cinzel',serif;
+  font-size:clamp(.85rem,2vw,1.15rem);
+  letter-spacing:.18em;text-transform:uppercase;
+  color:rgba(255,255,255,.6);
+  margin-bottom:28px;
+}
+.hero-tagline{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(1.1rem,2.5vw,1.5rem);
+  font-style:italic;
+  color:rgba(255,255,255,.8);
+  line-height:1.6;
+  max-width:560px;margin:0 auto 12px;
+}
+.hero-tagline-ta{
+  font-family:'Noto Sans Tamil',sans-serif;
+  font-size:clamp(.9rem,2vw,1.1rem);
+  color:rgba(255,255,255,.65);
+  margin-bottom:44px;
+  display:block;
+}
+
+.hero-ctas{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn-primary{
+  font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;
+  background:var(--accent);color:var(--primary-deep);
+  padding:14px 32px;border-radius:3px;
+  border:none;cursor:pointer;
+  transition:all .3s;
+  box-shadow:0 4px 20px rgba(201,168,76,.35);
+  font-weight:700;
+}
+.btn-primary:hover{
+  background:var(--accent-light);
+  transform:translateY(-2px);
+  box-shadow:0 8px 28px rgba(201,168,76,.5);
+}
+.btn-outline{
+  font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;
+  background:transparent;color:#fff;
+  padding:13px 32px;border-radius:3px;
+  border:1px solid rgba(255,255,255,.4);cursor:pointer;
+  transition:all .3s;
+}
+.btn-outline:hover{
+  border-color:rgba(255,255,255,.8);background:rgba(255,255,255,.08);
+  transform:translateY(-2px);
+}
+.hero-scroll-hint{
+  position:absolute;bottom:32px;left:50%;transform:translateX(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:8px;
+  color:rgba(255,255,255,.4);
+  font-family:'Cinzel',serif;font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;
+}
+.scroll-line{
+  width:1px;height:40px;background:linear-gradient(to bottom,rgba(201,168,76,.6),transparent);
+  animation:scrollAnim 2s ease-in-out infinite;
+}
+@keyframes scrollAnim{
+  0%,100%{transform:scaleY(1);opacity:1}
+  50%{transform:scaleY(.5);opacity:.5}
+}
+
+/* ─────────────────────────────────────────────────────────────
+   GOLD STRIP BANNER
+───────────────────────────────────────────────────────── */
+#gold-strip{
+  background:linear-gradient(90deg, var(--primary-deep) 0%, var(--accent) 20%, var(--accent-light) 50%, var(--accent) 80%, var(--primary-deep) 100%);
+  padding:22px 5%;
+  text-align:center;
+  position:relative;overflow:hidden;
+}
+#gold-strip::before{
+  content:'';position:absolute;inset:0;
+  background:repeating-linear-gradient(90deg,transparent,transparent 40px,rgba(255,255,255,.05) 40px,rgba(255,255,255,.05) 41px);
+}
+.strip-inner{position:relative;z-index:1;}
+.strip-name{
+  font-family:'Cinzel',serif;font-size:clamp(1rem,2.5vw,1.4rem);
+  font-weight:700;color:var(--primary-deep);letter-spacing:.08em;
+}
+.strip-cred{
+  font-family:'Cormorant Garamond',serif;font-size:clamp(.85rem,2vw,1rem);
+  color:rgba(13,43,26,.75);margin-top:4px;font-style:italic;
+}
+.strip-cred-ta{
+  font-family:'Noto Sans Tamil',sans-serif;font-size:.85rem;
+  color:rgba(13,43,26,.7);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SECTION COMMON
+───────────────────────────────────────────────────────── */
+section{padding:90px 5%}
+.section-tag{
+  display:inline-block;
+  font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;
+  color:var(--accent);
+  border-bottom:1px solid rgba(201,168,76,.3);
+  padding-bottom:6px;margin-bottom:16px;
+}
+.section-title-ta{
+  font-family:'Noto Sans Tamil',sans-serif;
+  font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;
+  color:var(--primary);line-height:1.3;margin-bottom:8px;
+}
+.section-title-en{
+  font-family:'Cinzel',serif;
+  font-size:clamp(.8rem,1.5vw,1rem);letter-spacing:.15em;text-transform:uppercase;
+  color:var(--text-light);margin-bottom:32px;
+}
+.section-divider{
+  width:60px;height:2px;margin:0 auto 48px;
+  background:linear-gradient(90deg,transparent,var(--accent),transparent);
+}
+.section-divider.left{margin-left:0}
+
+/* ─────────────────────────────────────────────────────────────
+   ABOUT
+───────────────────────────────────────────────────────── */
+#about{background:var(--bg-alt);position:relative;overflow:hidden}
+#about::before{
+  content:'';position:absolute;right:-150px;top:50%;transform:translateY(-50%);
+  width:500px;height:500px;border-radius:50%;
+  background:radial-gradient(circle,rgba(201,168,76,.06) 0%,transparent 70%);
+  pointer-events:none;
+}
+.about-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;
+  max-width:1100px;margin:0 auto;
+}
+.about-mandala-wrap{
+  display:flex;align-items:center;justify-content:center;
+  position:relative;
+}
+.mandala-outer{
+  width:320px;height:320px;border-radius:50%;
+  border:1px solid rgba(201,168,76,.2);
+  display:flex;align-items:center;justify-content:center;
+  position:relative;
+  animation:mandalaRotate 60s linear infinite;
+}
+.mandala-outer::before,
+.mandala-outer::after{
+  content:'';position:absolute;
+  border-radius:50%;border:1px solid rgba(201,168,76,.15);
+}
+.mandala-outer::before{width:270px;height:270px;animation:mandalaRotate 40s linear infinite reverse}
+.mandala-outer::after{width:220px;height:220px;animation:mandalaRotate 25s linear infinite}
+@keyframes mandalaRotate{to{transform:rotate(360deg)}}
+.mandala-inner{
+  width:180px;height:180px;border-radius:50%;
+  background:linear-gradient(135deg,rgba(201,168,76,.12),rgba(26,74,46,.2));
+  border:2px solid rgba(201,168,76,.4);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  box-shadow:0 0 40px rgba(201,168,76,.15), 0 0 80px rgba(26,74,46,.1);
+  animation:none;
+}
+.mandala-symbol{font-size:2.8rem;line-height:1;display:block;margin-bottom:4px}
+.mandala-label{
+  font-family:'Cinzel',serif;font-size:.5rem;letter-spacing:.2em;
+  color:var(--accent);text-transform:uppercase;
+}
+/* petal lines around mandala */
+.mandala-petals{
+  position:absolute;inset:0;
+  animation:mandalaRotate 80s linear infinite;
+}
+.mandala-petals::before{
+  content:'';position:absolute;inset:14px;border-radius:50%;
+  background:
+    repeating-conic-gradient(
+      from 0deg,
+      rgba(201,168,76,.12) 0deg 2deg,
+      transparent 2deg 30deg
+    );
+}
+.about-content{}
+.about-lead{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:clamp(1.2rem,2.5vw,1.55rem);
+  color:var(--primary);line-height:1.6;margin-bottom:20px;
+}
+.about-lead-ta{
+  font-family:'Noto Sans Tamil',sans-serif;font-size:1rem;
+  color:var(--text-muted);margin-bottom:28px;line-height:1.8;
+}
+.about-body{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.05rem;color:var(--text-muted);line-height:1.9;
+  margin-bottom:16px;
+}
+.about-body-ta{
+  font-family:'Noto Sans Tamil',sans-serif;font-size:.9rem;
+  color:var(--text-light);line-height:1.9;
+}
+.about-badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.badge{
+  font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;
+  background:rgba(201,168,76,.1);color:var(--accent);
+  border:1px solid rgba(201,168,76,.3);
+  padding:6px 14px;border-radius:24px;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SERVICES
+───────────────────────────────────────────────────────── */
+#services{background:var(--bg)}
+.services-header{text-align:center;margin-bottom:56px}
+.services-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:28px;
+  max-width:1100px;margin:0 auto;
+}
+.service-card{
+  background:var(--card-bg);
+  border:1px solid var(--border);
+  border-radius:4px;
+  padding:40px 32px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+  transition:all .35s;
+  cursor:default;
+}
+.service-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent));
+  transform:scaleX(0);transform-origin:left;
+  transition:transform .4s ease;
+}
+.service-card::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(201,168,76,.04),transparent);
+  opacity:0;transition:opacity .4s;
+}
+.service-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 20px 50px var(--shadow), 0 0 0 1px rgba(201,168,76,.2);
+  border-color:rgba(201,168,76,.3);
+}
+.service-card:hover::before{transform:scaleX(1)}
+.service-card:hover::after{opacity:1}
+.service-icon-wrap{
+  width:72px;height:72px;border-radius:50%;margin:0 auto 24px;
+  background:linear-gradient(135deg,var(--primary),var(--primary-mid));
+  border:2px solid rgba(201,168,76,.3);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.8rem;
+  box-shadow:0 8px 24px var(--shadow);
+  transition:all .35s;
+  position:relative;z-index:1;
+}
+.service-card:hover .service-icon-wrap{
+  transform:scale(1.1);
+  box-shadow:0 12px 32px var(--shadow), 0 0 20px var(--shadow-gold);
+  border-color:var(--accent);
+}
+.service-name-ta{
+  font-family:'Noto Sans Tamil',sans-serif;font-weight:700;
+  font-size:1.05rem;color:var(--primary);margin-bottom:6px;
+  position:relative;z-index:1;
+}
+.service-name-en{
+  font-family:'Cinzel',serif;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--accent);margin-bottom:16px;position:relative;z-index:1;
+}
+.service-desc{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1rem;color:var(--text-muted);line-height:1.7;
+  margin-bottom:10px;position:relative;z-index:1;
+}
+.service-desc-ta{
+  font-family:'Noto Sans Tamil',sans-serif;font-size:.82rem;
+  color:var(--text-light);line-height:1.8;position:relative;z-index:1;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   GALLERY
+───────────────────────────────────────────────────────── */
+#gallery{background:var(--bg-alt)}
+.gallery-header{text-align:center;margin-bottom:48px}
+.gallery-grid{
+  display:grid;grid-template-columns:repeat(2,1fr);gap:20px;
+  max-width:900px;margin:0 auto;
+}
+.gallery-item{
+  position:relative;overflow:hidden;border-radius:4px;
+  border:1px solid var(--border);
+  cursor:pointer;
+  aspect-ratio:16/10;
+  background:linear-gradient(135deg, var(--primary-deep), var(--primary));
+}
+.gallery-item:hover .gallery-overlay{opacity:1}
+.gallery-item:hover .gallery-img-inner{transform:scale(1.05)}
+.gallery-img-inner{
+  width:100%;height:100%;
+  display:flex;align-items:center;justify-content:center;
+  transition:transform .5s ease;
+  background:linear-gradient(135deg, var(--primary-deep), var(--primary-mid));
+  position:relative;
+}
+/* Decorative placeholder art */
+.gallery-placeholder{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:12px;color:rgba(201,168,76,.7);text-align:center;padding:20px;
+}
+.gallery-placeholder .ph-icon{font-size:3rem}
+.gallery-placeholder .ph-title{
+  font-family:'Noto Sans Tamil',sans-serif;font-size:.95rem;color:rgba(201,168,76,.8)
+}
+.gallery-placeholder .ph-sub{
+  font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.15em;
+  color:rgba(201,168,76,.5);text-transform:uppercase;
+}
+/* Decorative pattern overlay on placeholder */
+.gallery-img-inner::before{
+  content:'';position:absolute;inset:0;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(201,168,76,.08) 0%, transparent 60%),
+    repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(201,168,76,.03) 20px, rgba(201,168,76,.03) 21px);
+}
+.gallery-overlay{
+  position:absolute;inset:0;
+  background:rgba(13,43,26,.7);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;
+  opacity:0;transition:opacity .35s;
+  z-index:2;
+}
+.gallery-overlay-icon{font-size:2rem;color:var(--accent-light)}
+.gallery-overlay-text{
+  font-family:'Cinzel',serif;font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;
+  color:rgba(255,255,255,.9);
+}
+
+/* Lightbox */
+#lightbox{
+  display:none;position:fixed;inset:0;z-index:2000;
+  background:rgba(0,0,0,.92);
+  align-items:center;justify-content:center;
+  backdrop-filter:blur(6px);
+  padding:40px;
+}
+#lightbox.active{display:flex}
+.lightbox-content{
+  position:relative;max-width:860px;width:100%;
+  background:var(--primary-deep);border:1px solid rgba(201,168,76,.25);
+  border-radius:4px;overflow:hidden;
+}
+.lightbox-inner-img{
+  width:100%;min-height:400px;
+  display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(135deg, var(--primary-deep), var(--primary-mid));
+  position:relative;
+}
+.lightbox-inner-img::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(circle at 50% 50%, rgba(201,168,76,.1) 0%, transparent 60%);
+}
+.lightbox-caption{
+  padding:20px 24px;border-top:1px solid rgba(201,168,76,.2);
+}
+.lightbox-caption-title{
+  font-family:'Noto Sans Tamil',sans-serif;font-size:1rem;color:var(--accent-light);
+  margin-bottom:4px;
+}
+.lightbox-caption-sub{
+  font-family:'Cinzel',serif;font-size:.65rem;letter-spacing:.15em;
+  color:rgba(255,255,255,.5);text-transform:uppercase;
+}
+#lightbox-close{
+  position:absolute;top:14px;right:14px;
+  background:rgba(201,168,76,.15);border:1px solid rgba(201,168,76,.3);
+  color:var(--accent-light);width:36px;height:36px;border-radius:50%;
+  font-size:1.1rem;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  transition:all .25s;z-index:1;
+}
+#lightbox-close:hover{background:var(--accent);color:var(--primary-deep)}
+
+/* ─────────────────────────────────────────────────────────────
+   CITIES SERVED
+───────────────────────────────────────────────────────── */
+#cities{
+  background:var(--primary-deep);
+  padding:70px 5%;text-align:center;
+  position:relative;overflow:hidden;
+}
+#cities::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at center, rgba(201,168,76,.07) 0%, transparent 70%);
+}
+.cities-label{
+  font-family:'Cinzel',serif;font-size:.65rem;letter-spacing:.3em;text-transform:uppercase;
+  color:rgba(201,168,76,.7);margin-bottom:12px;position:relative;
+}
+.cities-heading-ta{
+  font-family:'Noto Sans Tamil',sans-serif;font-size:clamp(1.4rem,3vw,2rem);
+  font-weight:600;color:rgba(255,255,255,.9);margin-bottom:6px;position:relative;
+}
+.cities-heading-en{
+  font-family:'Cinzel',serif;font-size:.85rem;letter-spacing:.15em;text-transform:uppercase;
+  color:rgba(201,168,76,.6);margin-bottom:40px;position:relative;
+}
+.cities-list{
+  display:flex;align-items:center;justify-content:center;
+  flex-wrap:wrap;gap:0;position:relative;
+}
+.city-item{
+  display:flex;flex-direction:column;align-items:center;gap:8px;
+  padding:20px 48px;
+  border-right:1px solid rgba(201,168,76,.2);
+}
+.city-item:last-child{border-right:none}
+.city-dot{
+  width:48px;height:48px;border-radius:50%;
+  background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.3);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.3rem;
+}
+.city-name-ta{
+  font-family:'Noto Sans Tamil',sans-serif;font-size:1rem;
+  font-weight:600;color:#fff;
+}
+.city-name-en{
+  font-family:'Cinzel',serif;font-size:.62rem;letter-spacing:.12em;
+  color:var(--accent);text-transform:uppercase;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   CONTACT
+───────────────────────────────────────────────────────── */
+#contact{background:var(--bg)}
+.contact-grid{
+  display:grid;grid-template-columns:1fr 1.3fr;gap:64px;
+  max-width:1100px;margin:0 auto;align-items:start;
+}
+.contact-info{}
+.contact-detail{
+  display:flex;gap:16px;align-items:flex-start;
+  margin-bottom:28px;padding-bottom:28px;
+  border-bottom:1px solid var(--border);
+}
+.contact-detail:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.contact-icon{
+  width:44px;height:44px;border-radius:50%;flex-shrink:0;
+  background:linear-gradient(135deg,var(--primary),var(--primary-mid));
+  border:1px solid rgba(201,168,76,.3);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.1rem;margin-top:2px;
+}
+.contact-label-en{
+  font-family:'Cinzel',serif;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--accent);margin-bottom:4px;
+}
+.contact-value-ta{
+  font-family:'Noto Sans Tamil',sans-serif;font-size:.95rem;color:var(--text);
+  line-height:1.7;margin-bottom:2px;
+}
+.contact-value-en{
+  font-family:'Cormorant Garamond',serif;font-size:.95rem;
+  color:var(--text-muted);font-style:italic;
+}
+.contact-phone-link{
+  font-family:'Cinzel',serif;font-size:1.1rem;font-weight:700;
+  color:var(--primary);letter-spacing:.05em;
+  transition:color .25s;display:inline-block;margin-top:4px;
+}
+.contact-phone-link:hover{color:var(--accent)}
+
+/* Form */
+.contact-form-wrap{
+  background:var(--card-bg);
+  border:1px solid var(--border);
+  border-radius:4px;
+  padding:40px;
+  box-shadow:0 8px 40px var(--shadow);
+  position:relative;overflow:hidden;
+}
+.contact-form-wrap::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--accent),var(--accent-light),var(--accent));
+}
+.form-title-ta{
+  font-family:'Noto Sans Tamil',sans-serif;font-size:1.2rem;font-weight:700;
+  color:var(--primary);margin-bottom:4px;
+}
+.form-title-en{
+  font-family:'Cinzel',serif;font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--text-light);margin-bottom:28px;
+}
+.form-group{margin-bottom:20px}
+.form-group label{
+  display:block;
+  font-family:'Cinzel',serif;font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--primary);margin-bottom:8px;
+}
+.form-group input,
+.form-group textarea,
+.form-group select{
+  width:100%;padding:12px 16px;
+  background:var(--bg);
+  border:1px solid var(--border);border-radius:3px;
+  font-family:'Noto Sans Tamil',sans-serif;font-size:.9rem;
+  color:var(--text);
+  transition:border-color .25s, box-shadow .25s;
+  outline:none;
+  appearance:none;
+}
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus{
+  border-color:var(--accent);
+  box-shadow:0 0 0 3px rgba(201,168,76,.12);
+}
+.form-group textarea{resize:vertical;min-height:110px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-error{
+  font-family:'Noto Sans Tamil',sans-serif;font-size:.78rem;
+  color:#c0392b;margin-top:5px;display:none;
+}
+.form-submit{
+  width:100%;padding:14px;
+  background:linear-gradient(135deg,var(--primary),var(--primary-mid));
+  color:var(--accent-light);
+  font-family:'Cinzel',serif;font-size:.8rem;letter-spacing:.15em;text-transform:uppercase;
+  border:none;border-radius:3px;cursor:pointer;
+  transition:all .3s;
+  box-shadow:0 4px 20px var(--shadow);
+}
+.form-submit:hover{
+  background:linear-gradient(135deg,var(--primary-mid),var(--primary));
+  transform:translateY(-2px);box-shadow:0 8px 28px var(--shadow);
+}
+.form-success{
+  display:none;text-align:center;padding:32px 20px;
+}
+.form-success-icon{font-size:3rem;margin-bottom:12px}
+.form-success-ta{
+  font-family:'Noto Sans Tamil',sans-serif;font-size:1.1rem;font-weight:700;
+  color:var(--primary);margin-bottom:6px;
+}
+.form-success-en{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:1rem;color:var(--text-muted);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   FOOTER
+───────────────────────────────────────────────────────── */
+#footer{
+  background:var(--primary-deep);
+  padding:56px 5% 32px;
+  border-top:1px solid rgba(201,168,76,.15);
+}
+.footer-grid{
+  display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:48px;
+  max-width:1100px;margin:0 auto 48px;
+}
+.footer-brand{}
+.footer-logo-ta{
+  font-family:'Noto Sans Tamil',sans-serif;font-size:1.4rem;font-weight:700;
+  color:var(--accent-light);margin-bottom:4px;
+}
+.footer-logo-en{
+  font-family:'Cinzel',serif;font-size:.65rem;letter-spacing:.2em;
+  color:var(--accent);text-transform:uppercase;margin-bottom:16px;
+}
+.footer-tagline{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.95rem;color:rgba(255,255,255,.45);line-height:1.7;
+}
+.footer-col-title{
+  font-family:'Cinzel',serif;font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--accent);margin-bottom:16px;
+  padding-bottom:8px;border-bottom:1px solid rgba(201,168,76,.2);
+}
+.footer-link{
+  display:block;
+  font-family:'Noto Sans Tamil',sans-serif;font-size:.85rem;
+  color:rgba(255,255,255,.55);
+  padding:4px 0;transition:color .25s;
+}
+.footer-link:hover{color:var(--accent-light)}
+.footer-contact-line{
+  display:flex;gap:10px;align-items:flex-start;
+  font-family:'Noto Sans Tamil',sans-serif;font-size:.82rem;
+  color:rgba(255,255,255,.55);margin-bottom:10px;line-height:1.6;
+}
+.footer-contact-line .fc-icon{flex-shrink:0;font-size:.9rem;margin-top:2px}
+.footer-bottom{
+  border-top:1px solid rgba(201,168,76,.12);
+  padding-top:24px;max-width:1100px;margin:0 auto;
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;
+}
+.footer-copy{
+  font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.12em;
+  color:rgba(255,255,255,.3);text-transform:uppercase;
+}
+.footer-heart{color:var(--accent)}
+
+/* ─────────────────────────────────────────────────────────────
+   THEME SWITCHER
+───────────────────────────────────────────────────────── */
+#theme-btn{
+  position:fixed;bottom:28px;right:28px;z-index:1500;
+  width:52px;height:52px;border-radius:50%;
+  background:var(--accent);color:var(--primary-deep);
+  border:none;font-size:1.4rem;cursor:pointer;
+  box-shadow:0 4px 20px rgba(201,168,76,.5);
+  transition:all .3s;
+  display:flex;align-items:center;justify-content:center;
+}
+#theme-btn:hover{transform:scale(1.1);box-shadow:0 8px 28px rgba(201,168,76,.6)}
+
+#theme-panel{
+  position:fixed;bottom:92px;right:28px;z-index:1500;
+  background:var(--card-bg);
+  border:1px solid var(--border);border-radius:8px;
+  padding:20px;min-width:220px;
+  box-shadow:0 16px 48px rgba(0,0,0,.2);
+  display:none;
+  animation:panelIn .25s ease;
+}
+#theme-panel.open{display:block}
+@keyframes panelIn{
+  from{opacity:0;transform:translateY(10px)}
+  to{opacity:1;transform:translateY(0)}
+}
+.panel-title{
+  font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--text-light);margin-bottom:14px;
+}
+.theme-presets{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:16px;
+}
+.theme-preset{
+  display:flex;flex-direction:column;align-items:center;gap:5px;
+  cursor:pointer;
+  transition:transform .2s;
+}
+.theme-preset:hover{transform:scale(1.1)}
+.theme-dot{
+  width:28px;height:28px;border-radius:50%;
+  border:2px solid transparent;
+  transition:border-color .2s;
+}
+.theme-preset.active .theme-dot,
+.theme-preset:hover .theme-dot{border-color:var(--accent)}
+.theme-dot-label{
+  font-family:'Cinzel',serif;font-size:.45rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--text-muted);white-space:nowrap;
+}
+.panel-divider{height:1px;background:var(--border);margin:12px 0}
+.custom-picker-wrap{display:flex;flex-direction:column;gap:8px}
+.custom-picker-row{display:flex;align-items:center;gap:10px}
+.custom-picker-label{
+  font-family:'Cinzel',serif;font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--text-muted);flex:1;
+}
+.custom-picker-input{
+  width:32px;height:32px;border-radius:50%;cursor:pointer;
+  border:2px solid var(--border);padding:0;overflow:hidden;
+  background:none;
+}
+.apply-custom{
+  width:100%;padding:8px;margin-top:4px;
+  background:var(--primary);color:var(--accent-light);
+  font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;
+  border:none;border-radius:3px;cursor:pointer;
+  transition:background .25s;
+}
+.apply-custom:hover{background:var(--primary-mid)}
+
+/* ─────────────────────────────────────────────────────────────
+   RESPONSIVE
+───────────────────────────────────────────────────────── */
+@media(max-width:900px){
+  .about-grid{grid-template-columns:1fr;gap:40px}
+  .mandala-outer{width:240px;height:240px}
+  .mandala-outer::before{width:200px;height:200px}
+  .mandala-outer::after{width:160px;height:160px}
+  .mandala-inner{width:130px;height:130px}
+  .services-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr;gap:40px}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .city-item{padding:16px 24px}
+}
+@media(max-width:700px){
+  .nav-links,.nav-phone{display:none}
+  .hamburger{display:flex}
+  #hero{padding:80px 5% 50px}
+  .gallery-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;text-align:center}
+  .cities-list{flex-direction:column;gap:0}
+  .city-item{border-right:none;border-bottom:1px solid rgba(201,168,76,.15);padding:16px 0;width:100%}
+  .city-item:last-child{border-bottom:none}
+  .form-row{grid-template-columns:1fr}
+  .contact-form-wrap{padding:28px 20px}
+  .theme-presets{grid-template-columns:repeat(4,1fr)}
+  #theme-panel{right:16px;bottom:90px;min-width:200px}
+  #theme-btn{right:16px;bottom:20px}
+}
+
+/* ─────────────────────────────────────────────────────────────
+   DECORATIVE: kolam/pattern header ornament
+───────────────────────────────────────────────────────── */
+.ornament{
+  display:flex;align-items:center;gap:16px;
+  color:rgba(201,168,76,.4);font-size:.8rem;
+  margin-bottom:8px;
+}
+.ornament-line{
+  flex:1;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(201,168,76,.3));
+}
+.ornament-line.right{
+  background:linear-gradient(90deg,rgba(201,168,76,.3),transparent);
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════
+     NAVIGATION
+═══════════════════════════════════════════════════════════ -->
+<nav id="navbar">
+  <div class="nav-brand">
+    <div class="nav-logo-ring">🌿</div>
+    <div class="nav-title-wrap">
+      <div class="nav-title-ta">இறைவழி</div>
+      <div class="nav-title-en">Iraivazhi Healing</div>
+    </div>
+  </div>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#cities">Locations</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <a href="tel:+919944141597" class="nav-phone">
+    <span>📞</span> 99441 41597
+  </a>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-nav" id="mobile-nav">
+  <a href="#about" onclick="closeMobileNav()">About · பற்றி</a>
+  <a href="#services" onclick="closeMobileNav()">Services · சேவைகள்</a>
+  <a href="#gallery" onclick="closeMobileNav()">Gallery · படங்கள்</a>
+  <a href="#cities" onclick="closeMobileNav()">Locations · இடங்கள்</a>
+  <a href="#contact" onclick="closeMobileNav()">Contact · தொடர்பு</a>
+  <a href="tel:+919944141597">📞 99441 41597</a>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════════════════════ -->
+<section id="hero">
+  <div class="hero-bg-pattern"></div>
+  <div class="hero-texture"></div>
+  <div class="hero-arch"></div>
+  <div class="hero-arch"></div>
+  <div class="hero-arch"></div>
+
+  <div class="hero-content">
+    <div class="pulse-wrapper">
+      <div class="pulse-ring"></div>
+      <div class="pulse-ring"></div>
+      <div class="pulse-ring"></div>
+      <div class="hero-emblem">
+        <span class="hero-emblem-symbol">☘</span>
+        <span class="hero-emblem-text">Heal · குணமடை</span>
+      </div>
+    </div>
+
+    <div class="hero-subtitle-tag">Medicine-Free Healing · மருந்தற்ற குணமாக்கல்</div>
+
+    <h1 class="hero-ta-heading">
+      <span>இறை</span>வழி
+    </h1>
+    <div class="hero-en-heading">Iraivazhi — The Divine Path to Wellness</div>
+
+    <p class="hero-tagline">
+      "Where ancient Tamil wisdom meets the art of natural healing —
+      restoring harmony to body, mind, and spirit."
+    </p>
+    <span class="hero-tagline-ta">
+      பழந்தமிழ் அறிவியல் கொண்டு உடலை, மனதை, ஆன்மாவை சீரமைக்கும் தெய்வீக வழி.
+    </span>
+
+    <div class="hero-ctas">
+      <a href="#contact" class="btn-primary">முன்பதிவு செய்யுங்கள் · Book Appointment</a>
+      <a href="#services" class="btn-outline">சேவைகள் காண்க · View Services</a>
+    </div>
+  </div>
+
+  <div class="hero-scroll-hint">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     GOLD STRIP — PRACTITIONER
+═══════════════════════════════════════════════════════════ -->
+<div id="gold-strip">
+  <div class="strip-inner">
+    <div class="strip-name">ஹரி S. தாங்கதுரை C.A.Sc. &nbsp;·&nbsp; Hari S. Thangathurai C.A.Sc.</div>
+    <div class="strip-cred">
+      <span class="strip-cred-ta">பாரம்பரிய தமிழ் மருத்துவ நிபுணர் &nbsp;·&nbsp;</span>
+      Traditional Tamil Medicine Specialist
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     ABOUT
+═══════════════════════════════════════════════════════════ -->
+<section id="about">
+  <div class="about-grid">
+    <!-- Mandala visual -->
+    <div class="about-mandala-wrap reveal-left">
+      <div class="mandala-outer">
+        <div class="mandala-petals"></div>
+        <div class="mandala-inner">
+          <span class="mandala-symbol">🌿</span>
+          <span class="mandala-label">இறைவழி</span>
+        </div>
+      </div>
+    </div>
+    <!-- Content -->
+    <div class="about-content reveal-right">
+      <div class="ornament">
+        <div class="ornament-line"></div>
+        <span>✦</span>
+        <div class="ornament-line right"></div>
+      </div>
+      <div class="section-tag">About · பற்றி</div>
+      <h2 class="section-title-ta">இயற்கையே மருந்து</h2>
+      <div class="section-title-en">Nature is the Medicine</div>
+      <div class="section-divider left"></div>
+
+      <p class="about-lead">
+        "A body in balance heals itself — we simply restore what time and habit have disturbed."
+      </p>
+      <p class="about-lead-ta">
+        உடல் சமநிலையில் இருக்கும்போது தானே குணமடையும் — நாம் செய்வது காலமும் பழக்கமும் சிதைத்ததை மீண்டும் சரியாக்குவதே.
+      </p>
+
+      <p class="about-body">
+        இறைவழி (Iraivazhi) is a medicine-free healing center in Coimbatore rooted in the ancient sciences of Tamil Nadu. Founded by practitioner Hari S. Thangathurai, C.A.Sc., our center draws from millennia-old traditions — Varma, Dorn, and Acupuncture — to address the root cause of pain and disease rather than masking symptoms.
+      </p>
+      <p class="about-body-ta">
+        கோயம்புத்தூரில் அமைந்துள்ள இறைவழி மையம், தமிழ்நாட்டின் பண்டைய அறிவியலை அடிப்படையாகக் கொண்டது. வர்மம், தண்டுவட சீரமைப்பு, அக்குபாங்சர் போன்ற பாரம்பரிய முறைகளில் நோயின் வேரை அகற்றி, உடல் இயற்கையாகவே குணமடைய வழிவகுக்கிறோம்.
+      </p>
+
+      <div class="about-badges">
+        <span class="badge">No Medicines</span>
+        <span class="badge">Ancient Tamil Science</span>
+        <span class="badge">Root-Cause Healing</span>
+        <span class="badge">Holistic Approach</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SERVICES
+═══════════════════════════════════════════════════════════ -->
+<section id="services">
+  <div class="services-header reveal">
+    <div class="ornament" style="justify-content:center">
+      <div class="ornament-line"></div>
+      <span style="color:rgba(201,168,76,.5)">✦</span>
+      <div class="ornament-line right"></div>
+    </div>
+    <div class="section-tag">Services · சேவைகள்</div>
+    <h2 class="section-title-ta">குணமாக்கல் சேவைகள்</h2>
+    <div class="section-title-en">Our Healing Modalities</div>
+    <div class="section-divider"></div>
+  </div>
+
+  <div class="services-grid">
+
+    <!-- Card 1 -->
+    <div class="service-card reveal" style="transition-delay:.1s">
+      <div class="service-icon-wrap">⚡</div>
+      <div class="service-name-ta">வர்ம மருத்துவம்</div>
+      <div class="service-name-en">Varma Therapy</div>
+      <p class="service-desc">
+        The crown jewel of Tamil martial medicine — Varma Kalai targets 108 vital pressure points to dissolve energy blockages, relieve pain, and awaken the body's natural healing intelligence.
+      </p>
+      <p class="service-desc-ta">
+        108 வர்ம புள்ளிகளை தொட்டு, உடல் தன்னையே குணமாக்கும் சக்தியை விழிப்படையச் செய்யும் பண்டைய தமிழ் சிகிச்சை முறை.
+      </p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="service-card reveal" style="transition-delay:.2s">
+      <div class="service-icon-wrap">🦴</div>
+      <div class="service-name-ta">தண்டுவட சீரமைப்பு</div>
+      <div class="service-name-en">Dorn Healing</div>
+      <p class="service-desc">
+        A gentle, non-invasive European spinal therapy adapted for Tamil healing traditions. Realigns vertebrae, hips, and joints to correct structural imbalances causing chronic pain and discomfort.
+      </p>
+      <p class="service-desc-ta">
+        முதுகெலும்பு, இடுப்பு மற்றும் மூட்டுகளை மென்மையாக சரிசெய்து நாள்பட்ட வலியை நீக்கும் சிறந்த சிகிச்சை முறை.
+      </p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="service-card reveal" style="transition-delay:.3s">
+      <div class="service-icon-wrap">✨</div>
+      <div class="service-name-ta">அக்குபாங்சர்</div>
+      <div class="service-name-en">Single Point Touch Acupuncture</div>
+      <p class="service-desc">
+        A refined approach to classical acupuncture — our single-point method minimises needling while maximising therapeutic effect, balancing the body's meridian energy with surgical precision.
+      </p>
+      <p class="service-desc-ta">
+        ஒரே ஒரு புள்ளியில் தீண்டி, உடலின் ஆற்றல் பாதையை சமநிலைப்படுத்தி விரைவான குணமாக்கலை தரும் நுட்பமான சிகிச்சை.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     GALLERY
+═══════════════════════════════════════════════════════════ -->
+<section id="gallery">
+  <div class="gallery-header reveal">
+    <div class="section-tag">Gallery · படங்கள்</div>
+    <h2 class="section-title-ta">சிகிச்சை தளம்</h2>
+    <div class="section-title-en">Our Healing Space</div>
+    <div class="section-divider"></div>
+  </div>
+
+  <div class="gallery-grid">
+    <div class="gallery-item reveal" data-index="0">
+      <div class="gallery-img-inner">
+        <div class="gallery-placeholder">
+          <span class="ph-icon">🌿</span>
+          <span class="ph-title">வர்ம சிகிச்சை அரங்கம்</span>
+          <span class="ph-sub">Varma Therapy Hall · Iraivazhi Center</span>
+        </div>
+      </div>
+      <div class="gallery-overlay">
+        <div class="gallery-overlay-icon">🔍</div>
+        <div class="gallery-overlay-text">Click to Enlarge · பெரிதாக காண</div>
+      </div>
+    </div>
+
+    <div class="gallery-item reveal" style="transition-delay:.15s" data-index="1">
+      <div class="gallery-img-inner">
+        <div class="gallery-placeholder">
+          <span class="ph-icon">☘</span>
+          <span class="ph-title">இயற்கை குணமாக்கல் மையம்</span>
+          <span class="ph-sub">Natural Healing Sanctuary · Coimbatore</span>
+        </div>
+      </div>
+      <div class="gallery-overlay">
+        <div class="gallery-overlay-icon">🔍</div>
+        <div class="gallery-overlay-text">Click to Enlarge · பெரிதாக காண</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div id="lightbox">
+  <div class="lightbox-content">
+    <button id="lightbox-close" aria-label="Close">✕</button>
+    <div class="lightbox-inner-img" id="lightbox-img">
+      <div class="gallery-placeholder" style="color:rgba(201,168,76,.7);gap:16px">
+        <span style="font-size:4rem">🌿</span>
+        <div id="lightbox-title" style="font-family:'Noto Sans Tamil',sans-serif;font-size:1.2rem;color:rgba(201,168,76,.9);text-align:center"></div>
+      </div>
+    </div>
+    <div class="lightbox-caption">
+      <div class="lightbox-caption-title" id="lightbox-caption-ta"></div>
+      <div class="lightbox-caption-sub" id="lightbox-caption-en"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     CITIES
+═══════════════════════════════════════════════════════════ -->
+<section id="cities">
+  <div class="cities-label reveal">சேவை பகுதிகள் · Service Areas</div>
+  <h2 class="cities-heading-ta reveal">நாங்கள் வருகிறோம்</h2>
+  <div class="cities-heading-en reveal">Healing Across Tamil Nadu</div>
+
+  <div class="cities-list">
+    <div class="city-item reveal" style="transition-delay:.1s">
+      <div class="city-dot">🏛️</div>
+      <div class="city-name-ta">அரக்கோணம்</div>
+      <div class="city-name-en">Arakkonam</div>
+    </div>
+    <div class="city-item reveal" style="transition-delay:.2s">
+      <div class="city-dot">🏭</div>
+      <div class="city-name-ta">திருப்பூர்</div>
+      <div class="city-name-en">Tiruppur</div>
+    </div>
+    <div class="city-item reveal" style="transition-delay:.3s">
+      <div class="city-dot">🌿</div>
+      <div class="city-name-ta">கோயம்புத்தூர்</div>
+      <div class="city-name-en">Coimbatore</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     CONTACT
+═══════════════════════════════════════════════════════════ -->
+<section id="contact">
+  <div style="text-align:center;margin-bottom:56px" class="reveal">
+    <div class="ornament" style="justify-content:center">
+      <div class="ornament-line"></div>
+      <span style="color:rgba(201,168,76,.4)">✦</span>
+      <div class="ornament-line right"></div>
+    </div>
+    <div class="section-tag">Contact · தொடர்பு</div>
+    <h2 class="section-title-ta">எங்களை அணுகுங்கள்</h2>
+    <div class="section-title-en">Reach Out &amp; Begin Healing</div>
+    <div class="section-divider"></div>
+  </div>
+
+  <div class="contact-grid">
+    <!-- Info -->
+    <div class="reveal-left">
+      <div class="contact-detail">
+        <div class="contact-icon">📍</div>
+        <div>
+          <div class="contact-label-en">Address · முகவரி</div>
+          <div class="contact-value-ta">
+            2D, V.R Complex, சிவ தகம் நகர் வளைவு,<br>
+            V.K. சாலை, விநாயகபுரம்,<br>
+            கோயம்புத்தூர் – 35
+          </div>
+          <div class="contact-value-en">2D, V.R Complex, Siva Thagam Nagar Arch,<br>V.K. Road, Vinayagapuram, Coimbatore – 35</div>
+        </div>
+      </div>
+
+      <div class="contact-detail">
+        <div class="contact-icon">📞</div>
+        <div>
+          <div class="contact-label-en">Phone · தொலைபேசி</div>
+          <div class="contact-value-ta">நேரடியாக அழைக்கவும்</div>
+          <a href="tel:+919944141597" class="contact-phone-link">99441 41597</a>
+        </div>
+      </div>
+
+      <div class="contact-detail">
+        <div class="contact-icon">👨‍⚕️</div>
+        <div>
+          <div class="contact-label-en">Practitioner · மருத்துவர்</div>
+          <div class="contact-value-ta">ஹரி S. தாங்கதுரை C.A.Sc.</div>
+          <div class="contact-value-en">Hari S. Thangathurai, C.A.Sc.</div>
+        </div>
+      </div>
+
+      <div class="contact-detail">
+        <div class="contact-icon">🕐</div>
+        <div>
+          <div class="contact-label-en">Availability · நேரம்</div>
+          <div class="contact-value-ta">முன்பதிவு மூலம் மட்டும்</div>
+          <div class="contact-value-en">By Appointment Only</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form -->
+    <div class="reveal-right">
+      <div class="contact-form-wrap">
+        <div id="form-wrap">
+          <div class="form-title-ta">முன்பதிவு செய்யுங்கள்</div>
+          <div class="form-title-en">Book an Appointment</div>
+
+          <form id="appt-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="f-name">Name · பெயர்</label>
+                <input type="text" id="f-name" placeholder="உங்கள் பெயர் / Your name">
+                <div class="form-error" id="err-name">பெயர் தேவை · Name is required</div>
+              </div>
+              <div class="form-group">
+                <label for="f-phone">Phone · தொலைபேசி</label>
+                <input type="tel" id="f-phone" placeholder="+91 XXXXX XXXXX">
+                <div class="form-error" id="err-phone">சரியான எண் தேவை · Valid number required</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="f-city">City · நகரம்</label>
+              <select id="f-city">
+                <option value="">-- தேர்ந்தெடுக்கவும் / Select city --</option>
+                <option value="Coimbatore">கோயம்புத்தூர் / Coimbatore</option>
+                <option value="Tiruppur">திருப்பூர் / Tiruppur</option>
+                <option value="Arakkonam">அரக்கோணம் / Arakkonam</option>
+                <option value="Other">மற்றவை / Other</option>
+              </select>
+              <div class="form-error" id="err-city">நகரம் தேர்ந்தெடுக்கவும் · Please select a city</div>
+            </div>
+
+            <div class="form-group">
+              <label for="f-service">Service · சேவை</label>
+              <select id="f-service">
+                <option value="">-- சேவை தேர்ந்தெடுக்கவும் / Select service --</option>
+                <option value="varma">வர்ம மருத்துவம் / Varma Therapy</option>
+                <option value="dorn">தண்டுவட சீரமைப்பு / Dorn Healing</option>
+                <option value="acupuncture">அக்குபாங்சர் / Acupuncture</option>
+                <option value="consult">ஆலோசனை / Consultation</option>
+              </select>
+              <div class="form-error" id="err-service">சேவை தேர்ந்தெடுக்கவும் · Please select a service</div>
+            </div>
+
+            <div class="form-group">
+              <label for="f-msg">Message · செய்தி (Optional)</label>
+              <textarea id="f-msg" placeholder="உங்கள் தொல்லை / Describe your concern..."></textarea>
+            </div>
+
+            <button type="submit" class="form-submit">
+              முன்பதிவு செய்யுங்கள் · Book Appointment →
+            </button>
+          </form>
+        </div>
+
+        <div class="form-success" id="form-success">
+          <div class="form-success-icon">🌿</div>
+          <div class="form-success-ta">
+            நன்றி! உங்கள் முன்பதிவு பெறப்பட்டது.<br>
+            விரைவில் தொடர்பு கொள்வோம்.
+          </div>
+          <div class="form-success-en">
+            Thank you! Your appointment request has been received.<br>
+            We will contact you shortly.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════════════════════ -->
+<footer id="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo-ta">இறைவழி</div>
+      <div class="footer-logo-en">Iraivazhi — Medicine-Free Healing</div>
+      <p class="footer-tagline">
+        "Where ancient Tamil wisdom meets the healing power of nature — restoring balance, one body at a time."
+      </p>
+    </div>
+    <div>
+      <div class="footer-col-title">Quick Links · இணைப்புகள்</div>
+      <a href="#about" class="footer-link">About · பற்றி</a>
+      <a href="#services" class="footer-link">Services · சேவைகள்</a>
+      <a href="#gallery" class="footer-link">Gallery · படங்கள்</a>
+      <a href="#cities" class="footer-link">Locations · இடங்கள்</a>
+      <a href="#contact" class="footer-link">Contact · தொடர்பு</a>
+    </div>
+    <div>
+      <div class="footer-col-title">Contact · தொடர்பு</div>
+      <div class="footer-contact-line">
+        <span class="fc-icon">📍</span>
+        <span>2D, V.R Complex, Siva Thagam Nagar Arch, V.K. Road, Vinayagapuram, Coimbatore – 35</span>
+      </div>
+      <div class="footer-contact-line">
+        <span class="fc-icon">📞</span>
+        <a href="tel:+919944141597" style="color:var(--accent-light)">99441 41597</a>
+      </div>
+      <div class="footer-contact-line">
+        <span class="fc-icon">👨‍⚕️</span>
+        <span>ஹரி S. தாங்கதுரை C.A.Sc.</span>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">
+      © 2024 இறைவழி (Iraivazhi). All rights reserved.
+    </div>
+    <div class="footer-copy">
+      Crafted with <span class="footer-heart">♥</span> for traditional Tamil healing
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════════════════════
+     THEME SWITCHER
+═══════════════════════════════════════════════════════════ -->
+<button id="theme-btn" title="Change Theme · நிறம் மாற்று" onclick="togglePanel()">🎨</button>
+
+<div id="theme-panel">
+  <div class="panel-title">Choose Theme · நிறம் தேர்க</div>
+  <div class="theme-presets">
+    <div class="theme-preset active" onclick="applyTheme('')" data-theme="">
+      <div class="theme-dot" style="background:linear-gradient(135deg,#1a4a2e,#c9a84c)"></div>
+      <span class="theme-dot-label">Forest</span>
+    </div>
+    <div class="theme-preset" onclick="applyTheme('ocean')" data-theme="ocean">
+      <div class="theme-dot" style="background:linear-gradient(135deg,#0d3d5c,#f0a500)"></div>
+      <span class="theme-dot-label">Ocean</span>
+    </div>
+    <div class="theme-preset" onclick="applyTheme('royal')" data-theme="royal">
+      <div class="theme-dot" style="background:linear-gradient(135deg,#3b1a78,#d4a017)"></div>
+      <span class="theme-dot-label">Royal</span>
+    </div>
+    <div class="theme-preset" onclick="applyTheme('sunset')" data-theme="sunset">
+      <div class="theme-dot" style="background:linear-gradient(135deg,#8b2500,#e8a020)"></div>
+      <span class="theme-dot-label">Sunset</span>
+    </div>
+    <div class="theme-preset" onclick="applyTheme('rose')" data-theme="rose">
+      <div class="theme-dot" style="background:linear-gradient(135deg,#6b2040,#c8a050)"></div>
+      <span class="theme-dot-label">Rose</span>
+    </div>
+    <div class="theme-preset" onclick="applyTheme('light')" data-theme="light">
+      <div class="theme-dot" style="background:linear-gradient(135deg,#2a5c3a,#8b6914)"></div>
+      <span class="theme-dot-label">Light</span>
+    </div>
+    <div class="theme-preset" onclick="applyTheme('slate')" data-theme="slate">
+      <div class="theme-dot" style="background:linear-gradient(135deg,#1a2a3a,#c08a30)"></div>
+      <span class="theme-dot-label">Slate</span>
+    </div>
+    <div class="theme-preset" onclick="applyTheme('earth')" data-theme="earth">
+      <div class="theme-dot" style="background:linear-gradient(135deg,#4a3010,#c8a040)"></div>
+      <span class="theme-dot-label">Earth</span>
+    </div>
+  </div>
+  <div class="panel-divider"></div>
+  <div class="panel-title">Custom Gradient · தனிப்பயன்</div>
+  <div class="custom-picker-wrap">
+    <div class="custom-picker-row">
+      <span class="custom-picker-label">Primary Color</span>
+      <input type="color" class="custom-picker-input" id="cp-primary" value="#1a4a2e">
+    </div>
+    <div class="custom-picker-row">
+      <span class="custom-picker-label">Accent Color</span>
+      <input type="color" class="custom-picker-input" id="cp-accent" value="#c9a84c">
+    </div>
+    <button class="apply-custom" onclick="applyCustomTheme()">Apply · பயன்படுத்து</button>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     JAVASCRIPT
+═══════════════════════════════════════════════════════════ -->
+<script>
+/* ── Navbar scroll ── */
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 60);
+});
+
+/* ── Mobile nav ── */
+const hamburger = document.getElementById('hamburger');
+const mobileNav = document.getElementById('mobile-nav');
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('open');
+  mobileNav.classList.toggle('open');
+});
+function closeMobileNav() {
+  hamburger.classList.remove('open');
+  mobileNav.classList.remove('open');
+}
+
+/* ── Scroll reveal ── */
+const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      revealObserver.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+revealEls.forEach(el => revealObserver.observe(el));
+
+/* ── Gallery lightbox ── */
+const galleryData = [
+  {
+    titleMain:'வர்ம சிகிச்சை அரங்கம்',
+    ta:'வர்ம மருத்துவம் சிகிச்சை அரங்கம் — இறைவழி மையம்',
+    en:'Varma Therapy Hall · Iraivazhi Medicine-Free Healing Center, Coimbatore'
+  },
+  {
+    titleMain:'இயற்கை குணமாக்கல் மையம்',
+    ta:'இறைவழி — மருந்தற்ற குணமாக்கல் சேவை மையம்',
+    en:'Natural Healing Sanctuary · Iraivazhi Center, Coimbatore – 35'
+  }
+];
+
+const lightbox = document.getElementById('lightbox');
+const lightboxClose = document.getElementById('lightbox-close');
+const lightboxTitle = document.getElementById('lightbox-title');
+const lightboxCaptionTa = document.getElementById('lightbox-caption-ta');
+const lightboxCaptionEn = document.getElementById('lightbox-caption-en');
+
+document.querySelectorAll('.gallery-item').forEach((item, i) => {
+  item.addEventListener('click', () => openLightbox(i));
+});
+
+function openLightbox(idx) {
+  const d = galleryData[idx];
+  lightboxTitle.textContent = d.titleMain;
+  lightboxCaptionTa.textContent = d.ta;
+  lightboxCaptionEn.textContent = d.en;
+  lightbox.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  lightbox.classList.remove('active');
+  document.body.style.overflow = '';
+}
+lightboxClose.addEventListener('click', closeLightbox);
+lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+/* ── Form validation ── */
+const form = document.getElementById('appt-form');
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  let valid = true;
+
+  // Name
+  const name = document.getElementById('f-name').value.trim();
+  const errName = document.getElementById('err-name');
+  if (!name) { errName.style.display = 'block'; valid = false; }
+  else errName.style.display = 'none';
+
+  // Phone
+  const phone = document.getElementById('f-phone').value.trim();
+  const errPhone = document.getElementById('err-phone');
+  if (!phone || !/^[+\d\s\-]{8,15}$/.test(phone)) { errPhone.style.display = 'block'; valid = false; }
+  else errPhone.style.display = 'none';
+
+  // City
+  const city = document.getElementById('f-city').value;
+  const errCity = document.getElementById('err-city');
+  if (!city) { errCity.style.display = 'block'; valid = false; }
+  else errCity.style.display = 'none';
+
+  // Service
+  const service = document.getElementById('f-service').value;
+  const errService = document.getElementById('err-service');
+  if (!service) { errService.style.display = 'block'; valid = false; }
+  else errService.style.display = 'none';
+
+  if (valid) {
+    document.getElementById('form-wrap').style.display = 'none';
+    document.getElementById('form-success').style.display = 'block';
+  }
+});
+
+/* ── Theme switcher ── */
+let panelOpen = false;
+function togglePanel() {
+  panelOpen = !panelOpen;
+  document.getElementById('theme-panel').classList.toggle('open', panelOpen);
+}
+document.addEventListener('click', e => {
+  const btn = document.getElementById('theme-btn');
+  const panel = document.getElementById('theme-panel');
+  if (!btn.contains(e.target) && !panel.contains(e.target)) {
+    panelOpen = false;
+    panel.classList.remove('open');
+  }
+});
+
+function applyTheme(theme) {
+  document.documentElement.dataset.theme = theme;
+  document.querySelectorAll('.theme-preset').forEach(p => {
+    p.classList.toggle('active', p.dataset.theme === theme);
+  });
+}
+
+function applyCustomTheme() {
+  const primary = document.getElementById('cp-primary').value;
+  const accent  = document.getElementById('cp-accent').value;
+
+  // Darken primary for deep
+  const deep = shadeColor(primary, -40);
+  const mid  = shadeColor(primary, 15);
+  const accL = shadeColor(accent, 20);
+  const accP = shadeColor(accent, 60) + '33';
+
+  const root = document.documentElement;
+  root.style.setProperty('--custom-primary', primary);
+  root.style.setProperty('--custom-deep', deep);
+  root.style.setProperty('--custom-mid', mid);
+  root.style.setProperty('--custom-accent', accent);
+  root.style.setProperty('--custom-grad',
+    `linear-gradient(160deg,${deep} 0%,${primary} 50%,${mid} 100%)`);
+  root.style.setProperty('--accent-light', accL);
+
+  // Also override main vars directly
+  root.style.setProperty('--primary', primary);
+  root.style.setProperty('--primary-deep', deep);
+  root.style.setProperty('--primary-mid', mid);
+  root.style.setProperty('--accent', accent);
+  root.style.setProperty('--accent-light', accL);
+  root.style.setProperty('--grad-hero',
+    `linear-gradient(160deg,${deep} 0%,${primary} 50%,${mid} 100%)`);
+
+  document.documentElement.removeAttribute('data-theme');
+  document.querySelectorAll('.theme-preset').forEach(p => p.classList.remove('active'));
+}
+
+function shadeColor(hex, percent) {
+  const num = parseInt(hex.replace('#',''), 16);
+  const r = Math.min(255, Math.max(0, (num >> 16) + percent));
+  const g = Math.min(255, Math.max(0, ((num >> 8) & 0xff) + percent));
+  const b = Math.min(255, Math.max(0, (num & 0xff) + percent));
+  return '#' + [r, g, b].map(v => v.toString(16).padStart(2,'0')).join('');
+}
+
+/* ── Smooth scroll for all anchors ── */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      const offset = 80;
+      const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+  });
+});
+</script>
+</body>
+</html>
